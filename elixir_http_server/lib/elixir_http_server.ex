@@ -3,6 +3,8 @@ defmodule ElixirHttpServer do
   Documentation for `ElixirHttpServer`.
   """
 
+  # TODO: Fix socket creation to hold multiple connections
+
   def start(port) do
     with  {:ok, server} <- :gen_tcp.listen(port, [:binary, active: false, backlog: 1000]) do
       server_loop(server)
