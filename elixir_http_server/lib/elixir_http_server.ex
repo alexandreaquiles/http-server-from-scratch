@@ -23,8 +23,4 @@ defmodule ElixirHttpServer do
 
     server_loop(server)
   end
-
-  defp random_test() do
-    <<"#{Hello World!}">>
-  end
 end
